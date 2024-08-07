@@ -1,0 +1,11 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "layout/general_styles";
+@import "layout/navigation_bar";
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/components";
+
+@import "pages/home_page";

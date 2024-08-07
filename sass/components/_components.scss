@@ -1,0 +1,101 @@
+/* components */
+.text_gray {
+    font-family: $lato;
+    text-transform: uppercase;
+    color: $medium_gray_1;
+    font-size: $font_size_xxs;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+@keyframes word_movement {
+    0% {
+        content: "blogger";
+        opacity: 1;
+        transform: rotateX(-90deg);
+    }
+
+    3% {
+        content: "blogger";
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+    25% {
+        content: "blogger";
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+    30% {
+        content: "blogger";
+        opacity: 1;
+        transform: rotateX(-40deg);
+    }
+
+    32% {
+        content: "blogger";
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+
+    34% {
+        content: "writer";
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+
+    37% {
+        content: "writer";
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+    60% {
+        content: "writer";
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+    64% {
+        content: "writer";
+        opacity: 1;
+        transform: rotateX(-40deg);
+    }
+
+    66% {
+        content: "writer";
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+
+    68% {
+        content: "traveler";
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+
+    71% {
+        content: "traveler";
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+    94% {
+        content: "traveler";
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+    98% {
+        content: "traveler";
+        opacity: 1;
+        transform: rotateX(-40deg);
+    }
+
+    100% {
+        content: "traveler";
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+}

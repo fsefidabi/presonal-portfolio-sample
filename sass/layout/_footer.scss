@@ -1,0 +1,131 @@
+/* footer */
+footer {
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid #f3f3f3;
+
+    .footer_logo {
+        width: 190px;
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    .text_gray {
+        letter-spacing: 0.5px;
+    }
+
+    .footer_social_media a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+
+        &:hover {
+            @include border_radius_50;
+        }
+
+        &#facebook:hover {
+            background-color: #3c5fac;
+        }
+
+        &#twitter:hover {
+            background-color: #5ec3df;
+        }
+
+        &#vine:hover {
+            background-color: #00BF8F;
+        }
+
+        &#dribbble:hover {
+            background-color: #EA4C89;
+        }
+
+        &#instagram:hover {
+            background-color: #3f729b;
+        }
+
+        i {
+            color: $dark_gray;
+            opacity: 0.8;
+            font-size: $font_size_sm;
+            line-height: 35px;
+            margin: 0 13px 0 11.5px;
+            transition: 0.2s ease-out;
+        }
+
+        &:hover i {
+            color: $white;
+        }
+    }
+
+    .footer_image {
+        width: calc(12.5% - 8px);
+        margin: 0 4px;
+        position: relative;
+        /* overflow: hidden; */
+
+        img {
+            width: 100%;
+        }
+
+        .image_mask {
+            width: 100%;
+            padding-top: 100%;
+            background-color: rgba(0, 122, 255, .55);
+            opacity: 0;
+            transition: 0.7s;
+            z-index: 200;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        i {
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+            color: $white;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover .image_mask,
+        &:hover i {
+            opacity: 1;
+            z-index: 2000;
+        }
+    }
+
+    .footnote_copyright {
+        font-size: $font_size_xxs_1;
+        font-family: $noto_sans;
+        color: $dark_gray;
+        text-align: center;
+        margin: 17px 0 20px 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    footer {
+        .footer_image {
+            min-width: calc(50% - 8px);
+            position: relative;
+        }
+    }
+}
+
+/* _tablet_and_notebook(sm_and_md_and_lg_in_bootstrap_4)_have_identical_styles */
+@media only screen and (min-width: 576px) and (max-width: 1199px) {
+    footer {
+        .footer_image {
+            width: calc(33% - 8px);
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/* header */
+header {
+    height: 570px;
+    margin-top: 120px;
+
+    .header_logo {
+        position: relative;
+
+        img {
+            max-width: 50%;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            @include border_radius_50;
+        }
+    }
+
+    .row:nth-child(2) {
+        transform: translateY(-100px);
+
+        .header_text {
+            text-align: center;
+            font-family: 'poppins', sans-serif;
+
+            span {
+                &:first-child {
+                    display: block;
+                    font-weight: 700;
+                    font-size: 172px;
+                    letter-spacing: -12px;
+                    text-shadow: 9px -9px 0 $white;
+                }
+
+                &:not(:first-child) {
+                    display: block;
+                    transform: translateY(-50px);
+                    font-size: 48px;
+                    font-weight: 300;
+                    line-height: 60px;
+                }
+
+                &:last-child {
+                    perspective: 1000px;
+                    text-align: left;
+                    padding-left: 35px;
+
+                    &::after {
+                        content: "";
+                        font-weight: bold;
+                        transform-origin: center bottom;
+                        transition: 0.1s;
+                        display: inline-block;
+                        position: relative;
+                        animation: word_movement 8s ease-out infinite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mobile_and_tablet_portrait(xs_and_sm_in_bootstrap_4)_have_identical_styles */
+@media only screen and (max-width:767px) {
+    header {
+        height: auto;
+        margin-top: 20px;
+
+        .row:nth-child(2) {
+
+            .header_text {
+                transform: translateY(60px);
+
+                span {
+                    &:first-child {
+                        font-size: 52px;
+                        letter-spacing: -4px;
+                        text-shadow: 2px -2px 0 #fff;
+                    }
+
+                    &:not(:first-child) {
+                        font-size: $font_size_md_2;
+                        transform: translateY(-15px);
+                        line-height: $font_size_md_5;
+                    }
+
+                    &:last-child {
+                        margin-left: -67px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/* tablet_landscape(md_in_bootstrap_4) */
+@media only screen and(min-width: 768px) and (max-width:991px) {
+    header {
+        margin-top: 70px;
+    }
+}
